@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "162003598527",
+    "project_id": "cmsc-41bb0",
+    "storage_bucket": "cmsc-41bb0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:162003598527:android:3b3b73c47a9fbf09e9da0a",
+        "android_client_info": {
+          "package_name": "com.cmsc.wasela"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "162003598527-vv6vem7bb9f5hd6u6cm3eu377chl8pa5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAB305UTs1zzlr2GGqswkkSO13gBMjdZe4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "162003598527-vv6vem7bb9f5hd6u6cm3eu377chl8pa5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
