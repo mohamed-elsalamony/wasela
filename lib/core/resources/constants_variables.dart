@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:team_projects/core/resources/asset_path.dart';
-import 'package:team_projects/user/data/models/image_model.dart';
-import 'package:team_projects/user/ui/subpages/map_pages/flutter_map.dart';
+import 'package:team_projects/data/models/image_model.dart';
+import 'package:team_projects/ui/shared/map_pages/flutter_map.dart';
 
 
 class HomepageImage {
@@ -29,10 +29,6 @@ class HomepageImage {
 class QuestionsList {
   static const List<String> question1 = [
     'is visa is available?',
-    '',
-    '',
-    ' ',
-    ''
   ];
   static const List<String> question2 = ['a', 'b', 'c', 'd'];
   static const List<String> question3 = ['a', 'b', 'c', 'd'];

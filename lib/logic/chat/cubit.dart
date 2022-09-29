@@ -1,35 +1,41 @@
-// import 'package:flutter_bloc/flutter_bloc.dart';
-// import 'package:team_projects/logic/states.dart';
-// // import 'package:messageme_app/cubit/states.dart';
-// // import 'package:messageme_app/network/cache_helper.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:team_projects/logic/chat/states.dart';
 
-// class AppCubit extends Cubit<AppStates>{
-//   AppCubit() : super(InitialState());
+class AppCubit extends Cubit<AppStates>{
+  AppCubit() : super(InitialState());
 
-//   static AppCubit get(context)=>BlocProvider.of(context);
+  static AppCubit get(context)=>BlocProvider.of(context);
 
-//   bool showingSpinner = false;
+  bool showingSpinner = false;
 
-//   void showingSpinnerMethod(){
-//     showingSpinner = true;
-//     emit(ShowingSpinner());
-//   }
-//   void nonshowingSpinnerMethod(){
-//     showingSpinner = false;
-//     emit(NonShowingSpinner());
-//   }
+  void showingSpinnerMethod(){
+    showingSpinner = true;
+    emit(ShowingSpinner());
+  }
+  void nonshowingSpinnerMethod(){
+    showingSpinner = false;
+    emit(NonShowingSpinner());
+  }
 
-//   String invalid = '';
+  String invalid = '';
 
-//   void showingInvalid(String value){
-//     invalid = value;
-//     emit(ShowingInvalid());
-//   }
-//   // bool? isDark=CacheHelper.getBool(key: 'isDark');
-//   // void light(){
-//   //   isDark = !isDark!;
-//   //   CacheHelper.setBool(key: 'isDark', value: isDark!);
-//   //   emit(Brightness());
-//   // }
+  void showingInvalid(String value){
+    invalid = value;
+    emit(ShowingInvalid());
+  }
 
-// }
+
+}
+
+
+
+
+/// draft
+
+  /// darkMode
+  // bool? isDark=CacheHelper.getBool(key: 'isDark');
+  // void light(){
+  //   isDark = !isDark!;
+  //   CacheHelper.setBool(key: 'isDark', value: isDark!);
+  //   emit(Brightness());
+  // }

@@ -3,8 +3,7 @@ import 'package:latlong2/latlong.dart';
 import 'package:sizer/sizer.dart';
 import 'package:team_projects/core/style/colors.dart';
 import 'package:team_projects/core/widgets/default_border_button.dart';
-import 'package:team_projects/user/ui/subpages/map_pages/web_view.dart';
-
+import 'package:team_projects/ui/shared/map_pages/web_view.dart';
 
 class MyAlertDialog extends StatelessWidget {
   final String title;
@@ -12,15 +11,21 @@ class MyAlertDialog extends StatelessWidget {
   final bool canContact;
   final LatLng origin;
   final LatLng distination;
+  final void Function()? contactButton;
 
-  const MyAlertDialog({
+   MyAlertDialog({
     Key? key,
     required this.title,
     required this.contant,
     required this.canContact,
     required this.distination,
     required this.origin,
+    this.contactButton,
   }) : super(key: key);
+
+  String imageUrl =
+      "https://media.istockphoto.com/photos/service-drivethru-picture-id180709551?k=20&m=180709551&s=612x612&w=0&h=MmLyCgyc2K0QXlwVX83IlzdKdK4rADVg7PZU5rBPi0A=";
+
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +34,12 @@ class MyAlertDialog extends StatelessWidget {
         // mainAxisSize: MainAxisSize.min,
         // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Image.asset(
-            'assets/images/ara1.jpg',
-            fit: BoxFit.cover,
+          ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: Image.network(
+              imageUrl,
+              fit: BoxFit.cover,
+            ),
           ),
           SizedBox(height: 10),
           Text(title),
@@ -88,7 +96,7 @@ class MyAlertDialog extends StatelessWidget {
         ),
         canContact
             ? ElevatedButton(
-                onPressed: () {},
+                onPressed: contactButton,
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(22)),
@@ -117,10 +125,15 @@ class DoneAlertDialog extends StatelessWidget {
           borderRadius: BorderRadiusDirectional.circular(20)),
       title: Column(
         children: [
-          Icon(done? Icons.check_circle_rounded:Icons.add_photo_alternate_outlined, color: kBlue, size: 30),
+          Icon(
+              done
+                  ? Icons.check_circle_rounded
+                  : Icons.add_photo_alternate_outlined,
+              color: kBlue,
+              size: 30),
           Center(
               child: Text(
-            done?'Thank you !':'Ooops !',
+            done ? 'Thank you !' : 'Ooops !',
             style: Theme.of(context)
                 .textTheme
                 .headline1
@@ -141,7 +154,8 @@ class DoneAlertDialog extends StatelessWidget {
           child: DefultBorderButton(
             title: 'Ok',
             onPressed: () => Navigator.pop(context),
-            size: 40.w, isOutline: false,
+            size: 40.w,
+            isOutline: false,
           ),
         )
       ],

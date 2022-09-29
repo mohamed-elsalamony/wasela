@@ -36,5 +36,7 @@ class AppAssets {
   static const String wash = "assets/images/wash.png";
   static const String home = "assets/images/home.png";
   static const String setting = "assets/images/setting.png";
+  static const String marker = "assets/icons/marker1.png";
+
 
 }
